@@ -6,6 +6,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+import { SensorViewPage } from '../pages/sensor-view/sensor-view';
+import { GatewayViewPage } from '../pages/gateway-view/gateway-view';
+import { NetworkMgntPage } from '../pages/network-mgnt/network-mgnt';
+import { AddDevicePage } from '../pages/add-device/add-device';
+import { EventsPage } from '../pages/events/events';
+import { ReportsPage } from '../pages/reports/reports';
+import { SensorMapsPage } from '../pages/sensor-maps/sensor-maps';
+
+
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,7 +34,13 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Sensor view', component: SensorViewPage },
+      { title: 'Gateway view', component: GatewayViewPage },
+      { title: 'Network mgnt.', component: NetworkMgntPage },
+      { title: 'Add device ', component: AddDevicePage },
+      { title: 'Events', component: EventsPage },
+      { title: 'Reports', component: ReportsPage },
+      { title: 'Sensor maps', component: SensorMapsPage },
     ];
 
   }

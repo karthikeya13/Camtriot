@@ -1,0 +1,101 @@
+<!--
+  Generated template for the SensorViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Sensor View</ion-title>
+    </ion-navbar>
+ </ion-header>
+
+
+
+<ion-content >
+
+ <ion-item>
+  <ion-label>Place</ion-label>    
+  <ion-select [(ngModel)]="place">
+      <ion-option value="all" selected >All</ion-option>
+    <ion-option value="nes"> 1 Floor, 103</ion-option>
+    <ion-option value="n64">Livermore, CA </ion-option>
+    <ion-option value="ps">Hecenda dr, Dublin</ion-option>    
+  </ion-select>
+</ion-item>
+    <ion-list>
+
+        <ion-item  *ngFor="let item of items" (click)="itemSelected(item)">
+            <ion-avatar item-start>            
+              <!-- <ion-icon name="water"></ion-icon> -->
+              <i class="fa fa-tint fa-3x" aria-hidden="true" style="color:blue"></i>
+  
+            </ion-avatar>
+            <h2>{{item.name}}</h2> 
+            <p>Sensor ID : {{item.sensorId}}</p>
+            <p>Last sync : {{item.syncTime}} min ago...</p>
+            <h3>Notification: {{item.notifications}}, Messages : {{item.messages}}</h3>
+            <i class="fa fa-battery-full" aria-hidden="true"></i>
+            <i class="fa fa-signal" aria-hidden="true"></i>
+          </ion-item>
+
+        <ion-item >
+          <ion-avatar item-start>            
+            <!-- <ion-icon name="water"></ion-icon> -->
+            <i class="fa fa-tint fa-3x" aria-hidden="true" style="color:blue"></i>
+
+          </ion-avatar>
+          <h2>Water meter</h2>
+          <p>Last sync : 15 min ago...</p>
+          <h3>Notification:0, Messages : 1</h3>
+          <i class="fa fa-battery-full" aria-hidden="true"></i>
+          <i class="fa fa-signal" aria-hidden="true"></i>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>            
+              <!-- <ion-icon name="water"></ion-icon> -->
+              <i class="fa fa-tint fa-3x" aria-hidden="true" style="color:blue"></i>
+  
+            </ion-avatar>
+            <h2>Water meter</h2>
+            <p>Last sync : 15 min ago...</p>
+            <h3>Notification:0, Messages : 3</h3>
+            <i class="fa fa-battery-half" aria-hidden="true"></i>
+            <i class="fa fa-signal" aria-hidden="true"></i>
+          </ion-item>
+
+          <ion-item>
+              <ion-avatar item-start>            
+                <!-- <ion-icon name="water"></ion-icon> -->
+                <i class="fa fa-tint fa-3x" aria-hidden="true" style="color:blue"></i>
+    
+              </ion-avatar>
+              <h2>Water meter</h2>
+              <p>Last sync : 15 min ago...</p>
+              <h3>Notification:0, Messages : 11</h3>
+              <i class="fa fa-battery-three-quarters" aria-hidden="true"></i>
+              <i class="fa fa-signal" aria-hidden="true"></i>
+            </ion-item>
+
+            <ion-item>
+                <ion-avatar item-start>            
+                  <!-- <ion-icon name="water"></ion-icon> -->
+                  <i class="fa fa-tint fa-3x" aria-hidden="true" style="color:lightblue"></i>
+      
+                </ion-avatar>
+                <h2>Water meter</h2>
+                <p>Last sync : 1 day ago...</p>
+                <h3>Notification:0, Messages : 9 <i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true" style="color:red"></i></h3> 
+                <i class="fa fa-battery-empty" aria-hidden="true"></i>
+                <i class="fa fa-signal" aria-hidden="true"></i>
+              </ion-item>
+      </ion-list>
+
+  
+
+</ion-content>
